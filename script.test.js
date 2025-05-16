@@ -17,6 +17,7 @@ describe("Transaction functionality", () => {
       <button id="expenseBtn"></button>
       <ul id="incomeList"></ul>
       <ul id="expenseList"></ul>
+      <ul id="transactionList"></ul>
       <div id="balance"></div>
     `;
     require("./src/script.js");
@@ -35,7 +36,7 @@ describe("Transaction functionality", () => {
     incomeBtn.click();
 
     expect(document.getElementById("incomeList").textContent)
-      .toContain(`${description} - ${amount} kr (Inkomst)`);
+      .toContain(`${description} + ${amount} kr (Inkomst)`);
     expect(document.getElementById("balance").textContent).toBe(amount);
   });
 

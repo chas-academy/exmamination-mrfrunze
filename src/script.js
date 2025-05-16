@@ -46,14 +46,14 @@ function renderTransactions() {
   incomeList.innerHTML = "";
   for (const t of incomes) {
     const li = document.createElement("li");
-    li.textContent = `${t.description} +${t.amount} kr`;
+    li.textContent = `${t.description} + ${t.amount} kr (Inkomst)`;
     incomeList.appendChild(li);
   }
 
   expenseList.innerHTML = "";
   for (const t of expenses) {
     const li = document.createElement("li");
-    li.textContent = `${t.description} -${t.amount} kr`;
+    li.textContent = `${t.description} - ${t.amount} kr (Utgift)`;
     expenseList.appendChild(li);
   }
 
